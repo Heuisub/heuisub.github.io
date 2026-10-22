@@ -174,3 +174,5 @@ ul.interests { list-style: square; }
 ul.interests li { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 ul.interests li::marker { color: var(--text); }
 .ko { color: var(--muted); font-size: 15px; }
+.badge.presenter { color: #fff; background: var(--accent); border-color: var(--accent); }
+@media (prefers-color-scheme: dark) { .badge.presenter { color: #15171a; } }
