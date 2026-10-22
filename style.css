@@ -186,3 +186,5 @@ ul.interests li::marker { color: var(--text); }
 @media (max-width: 640px) {
   .interest .zoom { flex-basis: auto; width: 100%; }
 }
+/* Banner: wide crop so it doesn't dominate the page */
+.banner { aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 62%; }
