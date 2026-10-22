@@ -165,3 +165,11 @@ ol.cite li::marker { color: var(--muted); }
   padding: 0 8px; margin-left: 2px; vertical-align: 1px;
 }
 .badge.award { color: var(--accent); border-color: var(--accent); }
+
+/* Home emphasis (as on the original site) */
+:root { --red: #c8102e; }
+@media (prefers-color-scheme: dark) { :root { --red: #ff6b6b; } }
+.highlight { color: var(--red); font-weight: 700; }
+ul.interests { list-style: square; }
+ul.interests li { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+ul.interests li::marker { color: var(--text); }
