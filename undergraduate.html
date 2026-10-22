@@ -82,5 +82,16 @@
   </main>
 
   <footer>Contact: <a href="mailto:gusgmltjqqq@gmail.com">gusgmltjqqq@gmail.com</a></footer>
+  <script>
+    // 사진 비율에 맞춰 폭을 나눠서, 자르지 않고 높이를 맞춤
+    document.querySelectorAll('.project .gallery img').forEach(function (img) {
+      function fit() {
+        if (img.naturalWidth && img.naturalHeight) {
+          img.style.flexGrow = img.naturalWidth / img.naturalHeight;
+        }
+      }
+      if (img.complete) fit(); else img.addEventListener('load', fit);
+    });
+  </script>
 </body>
 </html>
