@@ -176,3 +176,13 @@ ul.interests li::marker { color: var(--text); }
 .ko { color: var(--muted); font-size: 15px; }
 .badge.presenter { color: #fff; background: var(--accent); border-color: var(--accent); }
 @media (prefers-color-scheme: dark) { .badge.presenter { color: #15171a; } }
+.banner { display: block; width: 100%; border-radius: 12px; margin: 20px 0 8px; background: var(--line); }
+
+/* Larger research images (click to open full size) */
+.interest .zoom { flex: 0 0 48%; display: block; }
+.interest .zoom img { width: 100%; display: block; border-radius: 8px; background: var(--line); cursor: zoom-in; transition: opacity .15s; }
+.interest .zoom:hover img { opacity: .9; }
+.interest > div { flex: 1; min-width: 0; }
+@media (max-width: 640px) {
+  .interest .zoom { flex-basis: auto; width: 100%; }
+}
