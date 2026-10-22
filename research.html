@@ -12,67 +12,93 @@
       <a class="brand" href="index.html">Heuisub Hyeon</a>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="research.html">Research</a></li>
+        <li class="has-sub">
+          <a class="active" href="research.html">Research ▾</a>
+          <ul class="sub">
+            <li><a href="undergraduate.html">Undergraduate Research</a></li>
+          </ul>
+        </li>
         <li><a href="publication.html">Publication</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1>Undergraduate Research</h1>
-    <p class="muted">Undergraduate research at Sejong University (Advisor: Prof. Hyunsoo Woo)</p>
+    <h1>Research</h1>
 
-    <h2>Projects</h2>
+    <h2>Research Interests</h2>
+    <p>My research focuses on understanding human locomotion and developing robust, adaptive locomotion strategies for humanoid robots, with an emphasis on stability, adaptation to challenging terrain, and efficient movement. The long-term goal is humanoid robots that can work reliably in environments too dangerous or difficult for humans.</p>
 
-    <article class="project">
-      <h3>Cable-Driven 2-DOF Ankle Prosthesis</h3>
-      <div class="period">2025.01 – Present</div>
-      <div class="gallery">
-        <img src="images/ankle-1.jpg" alt="Cable-driven ankle prosthesis" onerror="this.style.display='none'">
-        <img src="images/ankle-2.jpg" alt="Cable-driven ankle prosthesis" onerror="this.style.display='none'">
+    <h2>1. Robust Locomotion in Challenging Environments</h2>
+
+    <article class="interest">
+      <img src="images/interest-terrain.png" alt="" onerror="this.style.display='none'">
+      <div>
+        <h3>Adaptive locomotion on uneven and extreme terrain</h3>
+        <p>Locomotion strategies for surfaces such as sand, mud, and ice — adjusting movement to the terrain while maintaining stability.</p>
       </div>
-      <p>Designed a 2-DOF ankle prosthesis that moves the motors and battery to the waist and drives the ankle through cables, reducing the mass on the leg to 0.803 kg. The design combines a unidirectional parallel elastic actuator (UPEA) with the cable drive, and its estimated metabolic cost is lower than linkage-based and previous cable-driven designs. A 1-DOF testbed with a load cell is being built to measure cable transmission loss.</p>
-      <p class="ko">모터와 배터리를 허리로 옮기고 케이블로 발목을 구동하는 2자유도 발목 의족을 설계하는 연구입니다. 다리 쪽 질량을 0.803 kg으로 줄였으며, 단방향 병렬 탄성 구동기(UPEA)를 결합하여 기존 링크형·케이블형 의족보다 낮은 대사 비용을 예측하였습니다. 현재 로드셀을 장착한 1자유도 테스트베드를 제작하여 케이블 전달 손실을 측정할 예정입니다.</p>
-      <span class="tag award">ICROS 2025 · Undergraduate Paper Award</span>
-      <span class="tag">ICCAS 2025</span>
-      <span class="tag">IFAC World Congress 2026</span>
     </article>
 
-    <article class="project">
-      <h3>3-DOF End-Effector Upper-Limb Rehabilitation Robot</h3>
-      <div class="period">2025.09 – Present</div>
-      <div class="gallery">
-        <img src="images/rehab-1.jpg" alt="Upper-limb rehabilitation robot" onerror="this.style.display='none'">
+    <article class="interest">
+      <img src="images/interest-balance.png" alt="" onerror="this.style.display='none'">
+      <div>
+        <h3>Balance control and recovery from external disturbances</h3>
+        <p>How humans and robots recover from external pushes or impacts, and control strategies that prevent falls.</p>
       </div>
-      <p>Developed an end-effector rehabilitation robot from mechanical design to system integration: workspace and link design, motor and harmonic-drive selection, lightweight I-beam links, and a compact drive module. Integrated the system on a Xenomai RTOS PC with CAN communication and formulated a cascade admittance-impedance controller with a spatial tilt-angle limit.</p>
-      <p class="ko">뇌졸중 환자의 상지 재활 훈련을 위한 3자유도 엔드이펙터형 재활로봇을 개발하는 연구입니다. 작업 공간과 링크 설계, 모터·하모닉 드라이브 선정, 경량 I-빔 링크와 구동 모듈 설계를 수행하였습니다. 이후 Xenomai RTOS PC와 CAN 통신으로 시스템을 통합하고, 공간 기울기 각도 제한을 포함한 어드미턴스-임피던스 캐스케이드 제어 구조를 설계하였습니다.</p>
-      <span class="tag">ICNR 2026</span>
-      <span class="tag">ICCAS 2026</span>
     </article>
 
-    <article class="project">
-      <h3>LiDAR SLAM and Navigation for a Quadruped Robot</h3>
-      <div class="period">2025.09 – Present</div>
-      <div class="gallery">
-        <img src="images/slam-1.jpg" alt="Quadruped robot with LiDAR" onerror="this.style.display='none'">
-        <img src="images/slam-2.jpg" alt="SLAM map" onerror="this.style.display='none'">
+    <article class="interest">
+      <img src="images/interest-blind.png" alt="" onerror="this.style.display='none'">
+      <div>
+        <h3>Blind locomotion relying on proprioception</h3>
+        <p>Walking when vision is unavailable, using proprioceptive feedback such as joint states and body motion.</p>
       </div>
-      <p>Built the navigation stack on a Unitree Go2 with a Hesai LiDAR: GLIM SLAM mapping, an OctoMap 3D obstacle map, and Nav2 path planning. Follow-up research showed that the z-axis drift comes from a tilted map frame and proposed a correction based on estimating that tilt.</p>
-      <p class="ko">사족보행 로봇이 LiDAR 기반으로 지도를 만들고 스스로 주행하도록 하는 연구입니다. Unitree Go2와 Hesai LiDAR JT128로 GLIM SLAM 지도 작성, OctoMap 3D 장애물 지도, Nav2 경로 계획을 구성하였습니다. 후속 연구에서 z축 오차가 지도 좌표계의 기울기에서 비롯됨을 밝히고, 기울기 추정 기반 보정 방법을 제안하였습니다.</p>
-      <span class="tag">KSME 2026</span>
     </article>
 
-    <article class="project">
-      <h3>PORTY: Autonomous Port Security Patrol Robot</h3>
-      <div class="period">2025.06 – 2025.12 · Team project (4 members)</div>
-      <div class="gallery">
-        <img src="images/porty-1.jpg" alt="PORTY patrol robot" onerror="this.style.display='none'">
+    <h2>2. Human-Inspired Locomotion &amp; Motor Learning</h2>
+
+    <article class="interest">
+      <img src="images/interest-gait.png" alt="" onerror="this.style.display='none'">
+      <div>
+        <h3>Gait transitions across speeds</h3>
+        <p>How gait changes with speed, especially the transition from walking to running.</p>
       </div>
-      <p>Handled sensor integration (Arduino, Jetson Orin Nano), drive-unit design, and LiDAR SLAM with Nav2 for an outdoor patrol robot that detects intruders, fire, toxic gas, and road cracks.</p>
-      <p class="ko">항만에서 침입자, 화재, 유독가스, 도로 균열을 감지하는 실외 순찰 로봇을 개발하는 4인 팀 프로젝트입니다. 센서 통합(Arduino, Jetson Orin Nano), 구동부 설계, LiDAR SLAM과 Nav2 자율주행을 담당하였습니다.</p>
-      <span class="tag award">Encouragement Award (KMA Chairman's Award)</span>
-      <span class="tag">Smart Maritime Logistics × ICT Mentoring</span>
     </article>
+
+    <article class="interest">
+      <img src="images/interest-optimality.png" alt="" onerror="this.style.display='none'">
+      <div>
+        <h3>Optimality principles</h3>
+        <p>How humans select efficient gaits by balancing energy, effort, and impact, and how these principles can inform robot gait generation.</p>
+      </div>
+    </article>
+
+    <article class="interest">
+      <img src="images/interest-development.png" alt="" onerror="this.style.display='none'">
+      <div>
+        <h3>Developmental learning</h3>
+        <p>How human motor skills progress from crawling and standing to walking, and learning strategies that let robots acquire increasingly complex skills.</p>
+      </div>
+    </article>
+
+    <h2>3. Sim-to-Real Transfer for Robotic Locomotion</h2>
+
+    <article class="interest">
+      <img src="images/interest-sim2real.png" alt="" onerror="this.style.display='none'">
+      <div>
+        <p>Methods for narrowing the gap between simulation and real robots, combining robot dynamics, physics-based modeling, and learning-based approaches.</p>
+      </div>
+    </article>
+
+    <h2>Research Experience</h2>
+    <a class="link-card" href="undergraduate.html">
+      <strong>Undergraduate Research →</strong>
+      <span class="muted">Sejong University · Ankle prosthesis, rehabilitation robot, quadruped SLAM, patrol robot</span>
+    </a>
+    <div class="link-card disabled">
+      <strong>Graduate Research</strong>
+      <span class="muted">To be added later.</span>
+    </div>
   </main>
 
   <footer>Contact: <a href="mailto:gusgmltjqqq@gmail.com">gusgmltjqqq@gmail.com</a></footer>
