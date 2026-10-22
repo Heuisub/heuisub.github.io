@@ -146,3 +146,11 @@ a.link-card:hover { border-color: var(--accent); text-decoration: none; }
 .nav li.has-sub:focus-within ul.sub { display: flex; }
 .nav ul.sub a { display: block; padding: 6px 14px; white-space: nowrap; }
 .nav ul.sub a:hover { background: var(--bg); }
+
+/* Gallery: side by side with equal height (stack on phones) */
+.project .gallery { display: flex; gap: 12px; }
+.project .gallery img { flex: 1 1 0; min-width: 0; height: 240px; object-fit: cover; }
+@media (max-width: 640px) {
+  .project .gallery { flex-direction: column; }
+  .project .gallery img { height: auto; }
+}
