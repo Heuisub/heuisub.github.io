@@ -1,0 +1,17 @@
+title: Heuisub Hyeon
+url: https://heuisub.github.io
+baseurl: ""
+
+# 블로그 글 주소: heuisub.github.io/blog/글-이름/
+permalink: /blog/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+highlighter: rouge
+
+timezone: Asia/Seoul
+
+exclude:
+  - README.md
