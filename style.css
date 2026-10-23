@@ -211,3 +211,21 @@ main.post { max-width: 700px; }
 .post-body th, .post-body td { border: 1px solid var(--line); padding: 6px 12px; }
 .post-body mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
 .post-back { margin-top: 56px; }
+
+/* Research: each interest in its own box */
+.interest {
+  border: 1px solid var(--line); border-radius: 14px;
+  padding: 20px; margin-bottom: 14px; background: var(--bg);
+  box-shadow: 0 1px 2px rgba(16,24,40,0.04);
+  transition: border-color .15s, box-shadow .15s;
+}
+h2 + .interest { border-top: 1px solid var(--line); padding-top: 20px; }
+.interest:hover { border-color: #d5dae0; box-shadow: 0 6px 18px rgba(16,24,40,0.06); }
+.interest .zoom { flex-basis: 44%; }
+.interest h3 { margin-top: 2px; }
+.interest p:last-child { margin-bottom: 0; }
+@media (prefers-color-scheme: dark) {
+  .interest { background: var(--card); box-shadow: none; }
+  .interest:hover { border-color: #30343a; box-shadow: none; }
+}
+@media (max-width: 640px) { .interest { padding: 16px; } }
