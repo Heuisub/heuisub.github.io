@@ -1,0 +1,47 @@
+# Pages CMS 설정 (https://app.pagescms.org 에서 블로그 글을 웹으로 쓰기 위한 파일)
+media:
+  input: images
+  output: /images
+
+content:
+  - name: posts
+    label: Blog
+    type: collection
+    path: _posts
+    format: yaml-frontmatter
+    filename: "{year}-{month}-{day}-{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      sort: date
+      order: desc
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+        default: post
+      - name: title
+        label: 제목
+        type: string
+        required: true
+      - name: date
+        label: 날짜
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: description
+        label: 목록에 보일 한 줄 설명
+        type: string
+      - name: tags
+        label: 태그
+        type: string
+        list: true
+      - name: math
+        label: 수식 사용 ($$ ... $$)
+        type: boolean
+        default: false
+      - name: body
+        label: 본문
+        type: rich-text
+        options:
+          format: markdown
