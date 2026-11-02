@@ -42,19 +42,39 @@
       m.alt = el.alt || '';
     }
     stage.appendChild(m);
+    fit(m);
     cap.textContent = captionOf(el);
     var multi = items.length > 1;
     box.querySelector('.lb-prev').style.display = multi ? '' : 'none';
     box.querySelector('.lb-next').style.display = multi ? '' : 'none';
   }
 
+  // Size rule: same moderate box for everything (max 1000px wide, 75% of screen height),
+  // but never enlarge a small original more than 1.5x so it doesn't get blurry.
+  var MAX_W = 1000, MAX_H_RATIO = 0.75, MAX_UPSCALE = 1.5;
+  function fit(m) {
+    function apply() {
+      var nw = m.naturalWidth || m.videoWidth, nh = m.naturalHeight || m.videoHeight;
+      if (!nw || !nh) return;
+      var boxW = Math.min(MAX_W, stage.clientWidth), boxH = Math.min(window.innerHeight * MAX_H_RATIO, stage.clientHeight);
+      var s = Math.min(boxW / nw, boxH / nh, MAX_UPSCALE);
+      m.style.width = Math.round(nw * s) + 'px';
+      m.style.height = Math.round(nh * s) + 'px';
+    }
+    if (m.tagName === 'VIDEO') m.addEventListener('loadedmetadata', apply);
+    else if (m.complete) apply(); else m.addEventListener('load', apply);
+  }
+  window.addEventListener('resize', function () {
+    var m = stage.firstChild; if (m && box.classList.contains('on')) fit(m);
+  });
+
   function open(el) {
     items = Array.prototype.filter.call(document.querySelectorAll(SEL), function (x) {
       return x.offsetParent !== null; // skip hidden (missing) images
     });
     var i = items.indexOf(el);
+    box.classList.add('on');   // make the box visible first so its size can be measured
     show(i < 0 ? 0 : i);
-    box.classList.add('on');
     document.documentElement.style.overflow = 'hidden';
   }
 
