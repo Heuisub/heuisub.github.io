@@ -244,3 +244,16 @@ h2 + .project { border-top: 1px solid var(--line); padding-top: 24px; }
   .project:hover { border-color: #30343a; box-shadow: none; }
 }
 @media (max-width: 640px) { .project { padding: 18px; } }
+
+/* Project videos */
+.vid-head { font-size: 14.5px; font-weight: 650; margin: 22px 0 10px; }
+.vid-note { font-weight: 400; color: var(--muted); font-size: 13px; margin-left: 6px; }
+.vid-grid { display: grid; gap: 12px; margin-bottom: 8px; }
+.vid-grid.one { grid-template-columns: 1fr; }
+.vid-grid.three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 640px) { .vid-grid.three { grid-template-columns: 1fr; } .vid-note { display: block; margin: 2px 0 0; } }
+figure.vid { margin: 0; }
+figure.vid video { width: 100%; display: block; border-radius: 10px; background: var(--line); }
+figure.vid figcaption { font-size: 13px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+figure.vid a { display: block; cursor: zoom-in; }
+figure.vid a:hover video { opacity: .92; }

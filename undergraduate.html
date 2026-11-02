@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Undergraduate Research · Heuisub Hyeon</title>
-  <link rel="stylesheet" href="style.css?v=11">
+  <link rel="stylesheet" href="style.css?v=12">
 </head>
 <body>
   <header>
@@ -53,6 +53,32 @@
       </div>
       <p>Developed an end-effector rehabilitation robot from mechanical design to system integration: workspace and link design, motor and harmonic-drive selection, lightweight I-beam links, and a compact drive module. Integrated the system on a Xenomai RTOS PC with CAN communication and formulated a cascade admittance-impedance controller with a spatial tilt-angle limit.</p>
       <p class="ko">뇌졸중 환자의 상지 재활 훈련을 위한 3자유도 엔드이펙터형 재활로봇을 개발하는 연구입니다. 작업 공간과 링크 설계, 모터·하모닉 드라이브 선정, 경량 I-빔 링크와 구동 모듈 설계를 수행하였습니다. 이후 Xenomai RTOS PC와 CAN 통신으로 시스템을 통합하고, 공간 기울기 각도 제한을 포함한 어드미턴스-임피던스 캐스케이드 제어 구조를 설계하였습니다.</p>
+      <h4 class="vid-head">Real robot <span class="vid-note">joint PID position control · digital twin from encoder data (left) and camera (right)</span></h4>
+      <div class="vid-grid one">
+        <figure class="vid">
+          <video src="videos/rehab-real-circle-line.mp4" poster="videos/rehab-real-circle-line.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <figcaption>Vertical circle and line tracking</figcaption>
+        </figure>
+        <figure class="vid">
+          <video src="videos/rehab-real-three-joints.mp4" poster="videos/rehab-real-three-joints.jpg" autoplay muted loop playsinline preload="metadata"></video>
+          <figcaption>All three joints, repeated round trips</figcaption>
+        </figure>
+      </div>
+      <h4 class="vid-head">Controller simulation <span class="vid-note">MuJoCo · control laws from the paper · not experimental data</span></h4>
+      <div class="vid-grid three">
+        <figure class="vid">
+          <a href="videos/rehab-sim-admittance.mp4" target="_blank" title="Open full size"><video src="videos/rehab-sim-admittance.mp4" poster="videos/rehab-sim-admittance.jpg" autoplay muted loop playsinline preload="metadata"></video></a>
+          <figcaption>Admittance: the push shifts the path</figcaption>
+        </figure>
+        <figure class="vid">
+          <a href="videos/rehab-sim-impedance.mp4" target="_blank" title="Open full size"><video src="videos/rehab-sim-impedance.mp4" poster="videos/rehab-sim-impedance.jpg" autoplay muted loop playsinline preload="metadata"></video></a>
+          <figcaption>Impedance: a virtual spring pulls it back</figcaption>
+        </figure>
+        <figure class="vid">
+          <a href="videos/rehab-sim-tilt-limit.mp4" target="_blank" title="Open full size"><video src="videos/rehab-sim-tilt-limit.mp4" poster="videos/rehab-sim-tilt-limit.jpg" autoplay muted loop playsinline preload="metadata"></video></a>
+          <figcaption>Spatial tilt-angle limit (15°)</figcaption>
+        </figure>
+      </div>
       <span class="tag">ICNR 2026</span>
       <span class="tag">ICCAS 2026</span>
     </article>
